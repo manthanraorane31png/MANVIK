@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | MANVIK</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            background: #f7f9fc;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* HERO */
+
+        .about-hero {
+            background: linear-gradient(135deg, #071a36, #103866);
+            color: white;
+            padding: 75px 20px;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 44px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .about-hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #d7e2ef;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* ABOUT */
+
+        .about-section {
+            padding: 75px 20px;
+        }
+
+        .section-title {
+            color: #0b2447;
+            font-weight: 800;
+        }
+
+        .about-text {
+            color: #59697b;
+            line-height: 1.8;
+        }
+
+        .about-icon-box {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            border: 1px solid #e4eaf1;
+            height: 100%;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+        }
+
+        .about-icon {
+            width: 65px;
+            height: 65px;
+            margin: auto;
+            border-radius: 16px;
+            background: #edf4ff;
+            color: #0d4ea2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .about-icon-box h4 {
+            color: #122943;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .about-icon-box p {
+            color: #647386;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* MISSION */
+
+        .mission-box {
+            background: white;
+            border-radius: 22px;
+            padding: 45px;
+            border: 1px solid #e4eaf1;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .mission-box h2 {
+            color: #0b2447;
+            font-weight: 800;
+        }
+
+        .mission-box p {
+            color: #59697b;
+            line-height: 1.8;
+        }
+
+        .mission-point {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .mission-point i {
+            color: #f28c28;
+            font-size: 20px;
+        }
+
+        /* NUMBERS */
+
+        .number-box {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .number-box h2 {
+            color: #f28c28;
+            font-size: 38px;
+            font-weight: 800;
+        }
+
+        .number-box p {
+            color: #647386;
+            margin-bottom: 0;
+        }
+
+        /* CTA */
+
+        .about-cta {
+            background: #eef4fb;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .about-cta h2 {
+            color: #0b2447;
+            font-weight: 800;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #f28c28;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        .cta-btn:hover {
+            background: #d97516;
+            color: white;
+        }
+
+        footer {
+            background: #071a36;
+            color: white;
+            padding: 45px 20px;
+        }
+
+        footer p {
+            color: #b9c7d8;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+
+                <img src="images/manvik-logo.png" alt="MANVIK Logo" class="logo">
+
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">
+                            Services
+                        </a>
+                    </li>
+
+                    <a class="nav-link" href="my-bookings.html">
+                        My Bookings
+                    </a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#how-it-works">
+                            How It Works
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">
+                            Reviews
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="customer-care.html">
+                            Customer Care
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+
+                        <a class="btn btn-dark px-4" href="login.html">
+                            Login
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="about-hero">
+
+        <div class="container">
+
+            <span class="badge bg-light text-dark px-3 py-2 mb-3">
+
+                <i class="bi bi-stars"></i>
+                AI-POWERED HOME SERVICES
+
+            </span>
+
+            <h1>
+                About MANVIK
+            </h1>
+
+            <p>
+                We are building a smarter way for people to discover,
+                compare and book trusted home service professionals.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHO WE ARE ================= -->
+
+    <section class="about-section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <span class="text-uppercase fw-bold small" style="color:#f28c28;">
+                        Who We Are
+                    </span>
+
+                    <h2 class="section-title mt-2 mb-4">
+                        MANVIK is an AI-powered home service comparison and booking platform designed to make finding
+                        trusted professionals simple, transparent and convenient. Users can compare providers based on
+                        price, ratings, experience, distance and availability before making a booking.
+                    </h2>
+
+                    <p class="about-text">
+                        Finding a reliable home service professional
+                        can often mean making multiple calls, checking
+                        different prices and searching through reviews.
+                    </p>
+
+                    <p class="about-text">
+                        MANVIK brings these choices together in one
+                        platform. Customers can compare professionals
+                        based on price, ratings, experience, distance
+                        and availability before making a decision.
+                    </p>
+
+                    <p class="about-text">
+                        Our goal is simple: make home service decisions
+                        more transparent, convenient and intelligent.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="row g-4">
+
+                        <div class="col-md-6">
+
+                            <div class="about-icon-box">
+
+                                <div class="about-icon">
+                                    <i class="bi bi-search"></i>
+                                </div>
+
+                                <h4>
+                                    Discover
+                                </h4>
+
+                                <p>
+                                    Find suitable professionals for
+                                    different home service needs.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="about-icon-box">
+
+                                <div class="about-icon">
+                                    <i class="bi bi-bar-chart"></i>
+                                </div>
+
+                                <h4>
+                                    Compare
+                                </h4>
+
+                                <p>
+                                    Compare prices, ratings, experience
+                                    and availability.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="about-icon-box">
+
+                                <div class="about-icon">
+                                    <i class="bi bi-robot"></i>
+                                </div>
+
+                                <h4>
+                                    AI Assistance
+                                </h4>
+
+                                <p>
+                                    AI helps customers identify suitable
+                                    service providers.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="about-icon-box">
+
+                                <div class="about-icon">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+
+                                <h4>
+                                    Trust
+                                </h4>
+
+                                <p>
+                                    Focus on verified professionals,
+                                    transparent information and reviews.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MISSION ================= -->
+
+    <section class="pb-5">
+
+        <div class="container">
+
+            <div class="mission-box">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6">
+
+                        <span class="text-uppercase fw-bold small" style="color:#f28c28;">
+                            Our Mission
+                        </span>
+
+                        <h2 class="mt-2 mb-3">
+                            Better Decisions for Every Home
+                        </h2>
+
+                        <p>
+                            MANVIK aims to reduce the uncertainty involved
+                            in choosing home service professionals.
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-lg-6">
+
+                        <div class="mission-point">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <div>
+                                <strong>
+                                    Transparent Comparison
+                                </strong>
+
+                                <p class="small mb-0">
+                                    Help customers understand their options
+                                    before booking.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="mission-point">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <div>
+                                <strong>
+                                    Smarter Technology
+                                </strong>
+
+                                <p class="small mb-0">
+                                    Use AI to improve recommendations and
+                                    decision-making.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="mission-point">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <div>
+                                <strong>
+                                    Better Service Experience
+                                </strong>
+
+                                <p class="small mb-0">
+                                    Make booking and managing home services
+                                    easier for customers.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OUR VISION ================= -->
+
+    <section class="about-section pt-4">
+
+        <div class="container">
+
+            <div class="text-center mb-4">
+
+                <span class="text-uppercase fw-bold small" style="color:#f28c28;">
+                    Our Vision
+                </span>
+
+                <h2 class="section-title mt-2">
+                    Building the Future of Home Services
+                </h2>
+
+                <p class="about-text mx-auto" style="max-width:700px;">
+
+                    We envision a platform where customers can manage
+                    their entire home service journey from discovery
+                    and comparison to booking, warranty and future
+                    maintenance.
+
+                </p>
+
+            </div>
+
+
+            <!-- DEMO NUMBERS -->
+
+            <div class="row mt-4">
+
+                <div class="col-md-3 col-6">
+
+                    <div class="number-box">
+
+                        <h2>16+</h2>
+
+                        <p>
+                            Service Categories
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3 col-6">
+
+                    <div class="number-box">
+
+                        <h2>24/7</h2>
+
+                        <p>
+                            Service Discovery
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3 col-6">
+
+                    <div class="number-box">
+
+                        <h2>AI</h2>
+
+                        <p>
+                            Smart Recommendations
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3 col-6">
+
+                    <div class="number-box">
+
+                        <h2>1</h2>
+
+                        <p>
+                            Simple Platform
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="text-center text-muted small mt-3">
+                *Figures shown are prototype positioning values,
+                not current operating statistics.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="about-cta">
+
+        <div class="container">
+
+            <h2>
+                Ready to Find the Right Professional?
+            </h2>
+
+            <p class="text-muted mt-2">
+                Compare your options and make a smarter choice.
+            </p>
+
+            <a href="services.html" class="cta-btn">
+                Explore Services
+                <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-5 mb-4">
+
+                    <img src="images/manvik-logo.png" alt="MANVIK Logo" style="width:180px;" class="mb-3">
+
+                    <p>
+                        AI-powered home service comparison and booking
+                        platform that helps customers make smarter choices.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-3 mb-4">
+
+                    <h6 class="fw-bold">
+                        Company
+                    </h6>
+
+                    <p class="mb-2">
+                        <a href="about.html" class="text-white text-decoration-none">
+                            About Us
+                        </a>
+                    </p>
+
+                    <p class="mb-2">
+                        <a href="services.html" class="text-white text-decoration-none">
+                            Services
+                        </a>
+                    </p>
+
+                    <p class="mb-2">
+                        <a href="reviews.html" class="text-white text-decoration-none">
+                            Reviews
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <h6 class="fw-bold">
+                        Support
+                    </h6>
+
+                    <p class="mb-2">
+                        Customer Care
+                    </p>
+
+                    <p class="mb-2">
+                        support@manvik.com
+                    </p>
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+            <p class="text-center mb-0">
+                © 2026 MANVIK. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

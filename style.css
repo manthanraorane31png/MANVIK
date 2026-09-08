@@ -1,0 +1,1459 @@
+/* =========================================================
+   MANVIK HOME PAGE
+   MAIN STYLESHEET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    color: #172b4d;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+:root {
+    --navy: #0d2b52;
+    --navy-dark: #081f3b;
+    --orange: #ff641f;
+    --orange-dark: #e94f0c;
+    --light-blue: #f4f8fc;
+    --border: #e5ebf2;
+    --text: #172b4d;
+    --muted: #6b7a90;
+    --white: #ffffff;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.manvik-navbar {
+    min-height: 78px;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.manvik-logo {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar-nav {
+    gap: 5px;
+}
+
+.nav-link {
+    color: #344563 !important;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 12px !important;
+    transition: 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--orange) !important;
+}
+
+.btn-login {
+    color: var(--navy) !important;
+    border: 1px solid #dce4ed;
+    border-radius: 8px;
+    padding: 9px 18px !important;
+    font-size: 14px;
+    font-weight: 600;
+    background: white;
+    transition: 0.25s ease;
+}
+
+.btn-login:hover {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: white !important;
+}
+
+
+/* =========================================================
+   COMMON BUTTONS
+========================================================= */
+
+.btn-primary-manvik {
+    background: var(--orange);
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.btn-primary-manvik:hover {
+    background: var(--orange-dark);
+    color: white !important;
+    transform: translateY(-1px);
+}
+
+.btn-outline-manvik {
+    color: var(--navy);
+    background: white;
+    border: 1.5px solid var(--navy);
+    border-radius: 8px;
+    padding: 11px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.btn-outline-manvik:hover {
+    background: var(--navy);
+    color: white;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
+    background: linear-gradient(135deg, #f5f9fd 0%, #ffffff 70%);
+    padding: 80px 0 90px;
+    overflow: hidden;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff2ec;
+    color: var(--orange);
+    border: 1px solid #ffd9c9;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    color: var(--navy);
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero-title span {
+    color: var(--orange);
+    display: block;
+}
+
+.hero-text {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 560px;
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   HERO SEARCH
+========================================================= */
+
+.hero-search {
+    background: white;
+    border: 1px solid #dfe7ef;
+    border-radius: 10px;
+    padding: 7px;
+    display: flex;
+    max-width: 590px;
+    box-shadow: 0 10px 30px rgba(13, 43, 82, 0.08);
+}
+
+.search-input-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+}
+
+.search-input-area i {
+    color: #8b98a9;
+    font-size: 18px;
+}
+
+.search-input-area input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.search-input-area input::placeholder {
+    color: #9aa7b7;
+}
+
+.search-btn {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 17px;
+    font-size: 12px;
+}
+
+.quick-links span {
+    color: #7c8a9c;
+    font-weight: 600;
+}
+
+.quick-links a {
+    color: var(--navy);
+    font-weight: 600;
+}
+
+.quick-links a:hover {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   HERO IMAGE SLIDER
+========================================================= */
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #eaf0f6;
+    box-shadow: 0 22px 50px rgba(13, 43, 82, 0.15);
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   VERIFIED CARD
+========================================================= */
+
+.verified-card {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 12px 16px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.verified-icon {
+    color: #159447;
+    font-size: 25px;
+}
+
+.verified-card strong {
+    display: block;
+    color: var(--navy);
+    font-size: 13px;
+}
+
+.verified-card small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   SLIDER BUTTONS
+========================================================= */
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+    transition: 0.25s ease;
+    z-index: 5;
+}
+
+.slider-btn:hover {
+    background: var(--orange);
+    color: white;
+}
+
+.slider-prev {
+    left: 18px;
+}
+
+.slider-next {
+    right: 18px;
+}
+
+
+/* =========================================================
+   SLIDER DOTS
+========================================================= */
+
+.slider-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 7px;
+    z-index: 5;
+}
+
+.slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.slider-dot.active {
+    width: 23px;
+    border-radius: 10px;
+    background: var(--orange);
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.section-label {
+    display: inline-block;
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 9px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   POPULAR SERVICES
+========================================================= */
+
+.popular-services {
+    background: white;
+}
+
+.service-card {
+    display: block;
+    height: 100%;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(13, 43, 82, 0.10);
+    border-color: #d7e1eb;
+}
+
+.service-image {
+    height: 190px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.04);
+}
+
+.service-content {
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.service-content h5 {
+    color: var(--navy);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.service-content p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+.service-arrow {
+    min-width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #fff1eb;
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how-section {
+    background: var(--light-blue);
+}
+
+.step-card {
+    height: 100%;
+    position: relative;
+    text-align: center;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 18px;
+    transition: 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(13, 43, 82, 0.08);
+}
+
+.step-number {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    color: #dce5ee;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.step-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 17px;
+    border-radius: 50%;
+    background: #fff1eb;
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.step-card h5 {
+    color: var(--navy);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.step-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   WHY MANVIK
+========================================================= */
+
+.why-section {
+    background: white;
+}
+
+.why-title {
+    color: var(--navy);
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 10px 0 18px;
+}
+
+.why-text {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 470px;
+    margin-bottom: 25px;
+}
+
+.feature-card {
+    height: 100%;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: white;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0 12px 30px rgba(13, 43, 82, 0.08);
+    transform: translateY(-4px);
+}
+
+.feature-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: #fff1eb;
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.feature-card h5 {
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews-section {
+    background: #f8fafc;
+}
+
+.review-card {
+    height: 100%;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 25px;
+    transition: 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(13, 43, 82, 0.08);
+}
+
+.review-stars {
+    color: #f5a623;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.review-text {
+    color: #526276;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.review-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.review-user strong {
+    display: block;
+    color: var(--navy);
+    font-size: 13px;
+}
+
+.review-user small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.review-link {
+    color: var(--orange);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.review-link:hover {
+    color: var(--orange-dark);
+}
+
+
+/* =========================================================
+   CUSTOMER CARE
+========================================================= */
+
+.customer-care-section {
+    padding: 70px 0;
+    background: white;
+}
+
+.customer-care-box {
+    background: var(--navy);
+    border-radius: 18px;
+    padding: 45px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.care-label {
+    color: #ff9b70;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.customer-care-box h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 7px 0 8px;
+}
+
+.customer-care-box p {
+    color: #bdc9d7;
+    font-size: 13px;
+    max-width: 580px;
+    margin: 0;
+}
+
+.btn-light-manvik {
+    background: white;
+    color: var(--navy);
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.25s ease;
+}
+
+.btn-light-manvik:hover {
+    background: var(--orange);
+    color: white;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta {
+    padding: 85px 20px;
+    background: #f4f8fc;
+}
+
+.final-cta h2 {
+    color: var(--navy);
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.final-cta p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    background: var(--navy-dark);
+    padding: 65px 0 25px;
+    color: white;
+}
+
+.footer-logo {
+    width: 160px;
+    height: auto;
+    margin-bottom: 20px;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer-description {
+    color: #aebdce;
+    font-size: 12px;
+    line-height: 1.8;
+    max-width: 360px;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s ease;
+}
+
+.social-links a:hover {
+    background: var(--orange);
+}
+
+.footer h6 {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+.footer>.container a:not(.social-links a) {
+    color: #aebdce;
+}
+
+.footer .col-6 a,
+.footer .col-lg-2 a {
+    display: block;
+    color: #aebdce;
+    font-size: 12px;
+    margin-bottom: 10px;
+    transition: 0.2s ease;
+}
+
+.footer .col-6 a:hover,
+.footer .col-lg-2 a:hover {
+    color: var(--orange);
+}
+
+.footer-contact p {
+    color: #aebdce;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.footer-contact i {
+    color: var(--orange);
+    margin-right: 8px;
+}
+
+.footer-line {
+    border-color: rgba(255, 255, 255, 0.12);
+    margin: 40px 0 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #8293a8;
+    font-size: 11px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        padding: 15px 0;
+        align-items: flex-start !important;
+    }
+
+    .hero-section {
+        padding: 60px 0 70px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-image-container {
+        height: 420px;
+    }
+
+    .customer-care-box {
+        padding: 35px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .manvik-logo {
+        width: 155px;
+    }
+
+    .hero-section {
+        padding: 50px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-search {
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .search-input-area {
+        min-height: 48px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .hero-image-container {
+        height: 360px;
+        border-radius: 16px;
+    }
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .why-title {
+        font-size: 31px;
+    }
+
+    .customer-care-box {
+        padding: 30px 25px;
+    }
+
+    .customer-care-box h2 {
+        font-size: 26px;
+    }
+
+    .final-cta h2 {
+        font-size: 32px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 7px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-image-container {
+        height: 300px;
+    }
+
+    .verified-card {
+        left: 12px;
+        bottom: 12px;
+        padding: 9px 12px;
+    }
+
+    .verified-card strong {
+        font-size: 11px;
+    }
+
+    .verified-card small {
+        font-size: 9px;
+    }
+
+    .slider-btn {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ================================
+   MANVIK NAVBAR UPGRADE
+================================ */
+
+.navbar {
+    padding: 14px 0;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e9edf2;
+}
+
+.navbar .nav-link {
+    color: #172b4d !important;
+    font-weight: 500;
+    padding: 8px 12px !important;
+    margin: 0 2px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    background: #f1f5f9;
+    color: #0d2b52 !important;
+}
+
+.navbar .nav-link.active {
+    background: #eef3f8;
+    color: #0d2b52 !important;
+    font-weight: 600;
+}
+
+/* Customer Care button */
+.navbar .nav-link.customer-care-btn {
+    border: 1px solid #0d2b52;
+    margin-left: 8px;
+}
+
+/* Login button */
+.navbar .nav-link.login-btn {
+    background: #0d2b52;
+    color: #ffffff !important;
+    padding: 9px 18px !important;
+    margin-left: 6px;
+}
+
+.navbar .nav-link.login-btn:hover {
+    background: #173d68;
+    color: #ffffff !important;
+}
+
+/* ================================
+   CUSTOMER CARE PAGE
+================================ */
+
+.customer-care-page {
+    background: #f5f8fc;
+    min-height: 100vh;
+}
+
+.customer-care-page .support-card {
+    background: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 4px 18px rgba(13, 43, 82, 0.06);
+}
+
+.customer-care-page .support-card h4 {
+    color: #0d2b52;
+    font-weight: 700;
+}
+
+.customer-care-page .support-card p {
+    color: #667085;
+}
+
+/* ================================
+   LOGIN PAGE
+================================ */
+
+.login-page {
+    background: #f5f8fc;
+    min-height: 100vh;
+}
+
+.login-page .login-container {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(13, 43, 82, 0.10);
+    overflow: hidden;
+}
+
+/* ================================
+   SERVICE CARD UPGRADE
+================================ */
+
+.service-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(13, 43, 82, 0.12);
+}
+
+.service-item img {
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover img {
+    transform: scale(1.03);
+}
+
+/* ================================
+   COMPARE PAGE UPGRADE
+================================ */
+
+.compare-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.compare-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(13, 43, 82, 0.12);
+}
+
+.compare-card .book-btn {
+    transition: 0.2s ease;
+}
+
+.compare-card .book-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* ================================
+   AI RECOMMENDATION BOX
+================================ */
+
+.compare-ai-box {
+    border: 1px solid #dbe5ef;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(13, 43, 82, 0.08);
+    transition: 0.2s ease;
+}
+
+.compare-ai-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(13, 43, 82, 0.12);
+}
+
+/* ================================
+   PROVIDER CARD UPGRADE
+================================ */
+
+.compare-card {
+    border: 1px solid #e3e8ef;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(13, 43, 82, 0.06);
+    transition: 0.2s ease;
+}
+
+.compare-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(13, 43, 82, 0.12);
+}
+
+/* ================================
+   BOOKING FORM UPGRADE
+================================ */
+
+.booking-card {
+    border: 1px solid #e3e8ef;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(13, 43, 82, 0.08);
+}
+
+.booking-card .form-control,
+.booking-card .form-select {
+    border-radius: 9px;
+    border: 1px solid #d7dee8;
+    padding: 11px 13px;
+}
+
+.booking-card .form-control:focus,
+.booking-card .form-select:focus {
+    border-color: #0d2b52;
+    box-shadow: 0 0 0 3px rgba(13, 43, 82, 0.08);
+}
+
+/* =========================================================
+   RESPONSIVE SAFETY NET
+   Keeps the full MANVIK site usable on phones/tablets.
+========================================================= */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container,
+.container-fluid {
+    width: 100%;
+}
+
+/* Prevent long labels/buttons from forcing horizontal overflow */
+button,
+.btn,
+.nav-link,
+.navbar-brand {
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Simple logo + action navs used on booking/confirmation pages */
+.brand-logo {
+    color: var(--navy) !important;
+    white-space: nowrap;
+}
+
+.brand-logo .orange {
+    color: var(--orange) !important;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar .container {
+        gap: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .manvik-logo {
+        width: 145px;
+    }
+
+    .navbar-toggler {
+        padding: 5px 8px;
+        border-radius: 8px;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        gap: 2px;
+    }
+
+    .navbar .nav-link {
+        padding: 9px 10px !important;
+    }
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    /* Cards and content become naturally single-column through Bootstrap,
+       while these rules prevent cramped text on narrow screens. */
+    .card,
+    .booking-card,
+    .support-box,
+    .mission-box {
+        max-width: 100%;
+    }
+
+    .customer-care-box {
+        width: 100%;
+    }
+
+    .btn-primary-manvik,
+    .btn-outline-manvik {
+        max-width: 100%;
+    }
+
+    /* About / Customer Care custom pages */
+    .about-hero,
+    .care-hero {
+        padding: 55px 16px;
+    }
+
+    .about-hero h1,
+    .care-hero h1 {
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.15;
+    }
+
+    .about-hero p,
+    .care-hero p {
+        font-size: 15px;
+    }
+
+    .about-section {
+        padding: 55px 16px;
+    }
+
+    .about-icon-box {
+        padding: 25px 20px;
+    }
+
+    .mission-box,
+    .support-box {
+        padding: 28px 20px;
+        border-radius: 16px;
+    }
+
+    .number-box h2 {
+        font-size: 32px;
+    }
+
+    footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .manvik-logo {
+        width: 135px;
+    }
+
+    .hero-title {
+        font-size: clamp(32px, 10vw, 38px);
+    }
+
+    .hero-image-container {
+        height: 280px;
+    }
+
+    .verified-card {
+        max-width: calc(100% - 24px);
+    }
+
+    .verified-card strong {
+        font-size: 10px;
+    }
+
+    .verified-card small {
+        font-size: 9px;
+    }
+
+    .slider-prev {
+        left: 10px;
+    }
+
+    .slider-next {
+        right: 10px;
+    }
+
+    .service-image {
+        height: 175px;
+    }
+
+    .service-content {
+        padding: 15px;
+    }
+
+    .service-content h5 {
+        font-size: 15px;
+    }
+
+    .customer-care-box {
+        padding: 25px 20px;
+        gap: 20px;
+    }
+
+    .customer-care-box h2 {
+        font-size: 24px;
+    }
+
+    .final-cta {
+        padding: 60px 16px;
+    }
+
+    .final-cta h2 {
+        font-size: 29px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    /* Prevent the simple back/home buttons from becoming too wide */
+    .brand-logo + .btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding: 7px 12px;
+        font-size: 13px;
+    }
+
+    /* Login */
+    .login-section {
+        min-height: auto;
+        padding: 35px 14px;
+    }
+
+    .login-wrapper {
+        border-radius: 16px;
+    }
+
+    .login-left,
+    .login-right {
+        padding: 28px 20px;
+    }
+
+    .login-left h1 {
+        font-size: 28px;
+        margin-top: 18px;
+    }
+
+    /* Confirmation / booking data rows wrap instead of overflowing */
+    .booking-card .row > [class*="col-"] {
+        min-width: 0;
+    }
+
+    .booking-card .form-control,
+    .booking-card .form-select,
+    .booking-card textarea {
+        max-width: 100%;
+    }
+}

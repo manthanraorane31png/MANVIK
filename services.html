@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MANVIK | Home Services</title>
+
+    <meta name="description" content="Explore and compare trusted home service professionals on MANVIK.">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* =====================================================
+           SERVICES PAGE
+        ===================================================== */
+
+        .services-hero {
+            background: linear-gradient(135deg, #f4f8fc, #ffffff);
+            padding: 70px 0 60px;
+        }
+
+        .services-hero h1 {
+            color: #0d2b52;
+            font-size: clamp(38px, 5vw, 54px);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            margin-bottom: 15px;
+        }
+
+        .services-hero h1 span {
+            color: #ff641f;
+        }
+
+        .services-hero p {
+            color: #6b7a90;
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 15px;
+        }
+
+        .service-search-box {
+            max-width: 620px;
+            margin: 30px auto 0;
+            background: #ffffff;
+            border: 1px solid #dfe7ef;
+            border-radius: 10px;
+            padding: 7px;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(13, 43, 82, 0.08);
+        }
+
+        .service-search-box .search-area {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 14px;
+        }
+
+        .service-search-box i {
+            color: #8b98a9;
+        }
+
+        .service-search-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .services-main {
+            padding: 70px 0 90px;
+            background: #ffffff;
+        }
+
+        .service-page-card {
+            height: 100%;
+            background: #ffffff;
+            border: 1px solid #e5ebf2;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .service-page-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(13, 43, 82, 0.10);
+        }
+
+        .service-page-image {
+            height: 210px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-page-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s ease;
+        }
+
+        .service-page-card:hover .service-page-image img {
+            transform: scale(1.04);
+        }
+
+        .verified-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: #ffffff;
+            color: #159447;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-page-content {
+            padding: 20px;
+        }
+
+        .service-page-content h3 {
+            color: #0d2b52;
+            font-size: 18px;
+            font-weight: 750;
+            margin-bottom: 7px;
+        }
+
+        .service-description {
+            color: #6b7a90;
+            font-size: 12px;
+            min-height: 42px;
+            margin-bottom: 13px;
+        }
+
+        .service-rating {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 14px;
+        }
+
+        .stars {
+            color: #f5a623;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .rating-number {
+            color: #344563;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .review-count {
+            color: #8b98a9;
+            font-size: 11px;
+        }
+
+        .service-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #edf1f5;
+            padding-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .price-label {
+            color: #8b98a9;
+            font-size: 10px;
+        }
+
+        .price-value {
+            color: #0d2b52;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .service-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .compare-btn {
+            flex: 1;
+            border: 1px solid #0d2b52;
+            color: #0d2b52;
+            background: white;
+            border-radius: 7px;
+            padding: 9px 8px;
+            font-size: 11px;
+            font-weight: 700;
+            text-align: center;
+            transition: 0.25s ease;
+        }
+
+        .compare-btn:hover {
+            background: #0d2b52;
+            color: white;
+        }
+
+        .book-btn {
+            flex: 1;
+            border: none;
+            color: white;
+            background: #ff641f;
+            border-radius: 7px;
+            padding: 9px 8px;
+            font-size: 11px;
+            font-weight: 700;
+            text-align: center;
+            transition: 0.25s ease;
+        }
+
+        .book-btn:hover {
+            background: #e94f0c;
+            color: white;
+        }
+
+        .services-note {
+            margin-top: 50px;
+            background: #f4f8fc;
+            border: 1px solid #e5ebf2;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .services-note p {
+            color: #6b7a90;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        @media (max-width: 575px) {
+
+            .service-search-box {
+                flex-direction: column;
+            }
+
+            .service-search-box .search-area {
+                min-height: 45px;
+            }
+
+            .service-search-box .btn {
+                width: 100%;
+            }
+
+            .service-page-image {
+                height: 190px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top manvik-navbar">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+
+                <img src="images/manvik-logo.png" alt="MANVIK Logo" class="manvik-logo">
+
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">
+                            Services
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="my-bookings.html">
+                            My Bookings
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#how-it-works">
+                            How It Works
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">
+                            Reviews
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="customer-care.html">
+                            Customer Care
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a href="login.html" class="btn btn-login">
+                            Login
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a href="#all-services" class="btn btn-primary-manvik">
+                            Explore Services
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+     SERVICES HERO
+========================================================= -->
+
+    <section class="services-hero text-center">
+
+        <div class="container">
+
+            <span class="section-label">
+                MANVIK HOME SERVICES
+            </span>
+
+            <h1>
+                Everything Your Home
+                <span>Needs.</span>
+            </h1>
+
+            <p>
+                Compare trusted professionals, transparent prices,
+                ratings and availability — all in one place.
+            </p>
+
+
+            <!-- SEARCH -->
+
+            <div class="service-search-box">
+
+                <div class="search-area">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="text" id="serviceSearch" placeholder="Search for a service...">
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     ALL SERVICES
+========================================================= -->
+
+    <section class="services-main" id="all-services">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <span class="section-label">
+                    EXPLORE
+                </span>
+
+                <h2>
+                    Our Home Services
+                </h2>
+
+                <p>
+                    Choose a service and compare available professionals.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4 mt-4" id="servicesGrid">
+
+
+                <!-- =================================================
+                 1. ELECTRICIAN
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="electrician">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/electrician.png" alt="Electrician">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Electrician</h3>
+
+                            <p class="service-description">
+                                Electrical repairs, wiring, switches,
+                                fans and installation.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.8</span>
+
+                                <span class="review-count">
+                                    (1,245 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹299
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Electrician" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Electrician" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 2. PLUMBING
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="plumbing">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/plumbing.png" alt="Plumbing">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Plumbing</h3>
+
+                            <p class="service-description">
+                                Tap repair, leakage, pipe work,
+                                drainage and plumbing maintenance.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.7</span>
+
+                                <span class="review-count">
+                                    (982 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹249
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Plumbing" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Plumbing" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 3. CARPENTER
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="carpenter">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/carpenter.png" alt="Carpenter">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Carpenter</h3>
+
+                            <p class="service-description">
+                                Furniture repair, installation,
+                                assembly and custom work.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.8</span>
+
+                                <span class="review-count">
+                                    (756 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹399
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Carpenter" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Carpenter" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 4. PAINTING
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="painting">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/painting.png" alt="Painting">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Painting</h3>
+
+                            <p class="service-description">
+                                Interior and exterior painting
+                                for homes and rooms.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.6</span>
+
+                                <span class="review-count">
+                                    (643 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹799
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Painting" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Painting" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 5. AC REPAIR
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="ac repair">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/ac-repair.png" alt="AC Repair">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>AC Repair & Service</h3>
+
+                            <p class="service-description">
+                                AC servicing, repair, installation
+                                and maintenance.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.8</span>
+
+                                <span class="review-count">
+                                    (1,108 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹349
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=AC Repair & Service" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=AC Repair & Service" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 6. APPLIANCE REPAIR
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="appliance repair">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/appliance-repair.png" alt="Appliance Repair">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Appliance Repair</h3>
+
+                            <p class="service-description">
+                                Repair and maintenance for common
+                                home appliances.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.7</span>
+
+                                <span class="review-count">
+                                    (821 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹299
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Appliance Repair" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Appliance Repair" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 7. CLEANING
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="cleaning home cleaning">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/cleaning.png" alt="Home Cleaning">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Home Cleaning</h3>
+
+                            <p class="service-description">
+                                Deep cleaning, kitchen, bathroom
+                                and complete home cleaning.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.9</span>
+
+                                <span class="review-count">
+                                    (1,534 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹499
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Home Cleaning" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Home Cleaning" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 8. PEST CONTROL
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="pest control">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/pest-control.png" alt="Pest Control">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Pest Control</h3>
+
+                            <p class="service-description">
+                                Professional treatment for common
+                                household pests.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.6</span>
+
+                                <span class="review-count">
+                                    (512 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹599
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Pest Control" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Pest Control" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 9. PACKERS & MOVERS
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="packers movers">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/packers-movers.png" alt="Packers and Movers">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Packers & Movers</h3>
+
+                            <p class="service-description">
+                                Safe packing, transportation and
+                                home shifting assistance.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.7</span>
+
+                                <span class="review-count">
+                                    (438 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹1,499
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Packers%20%26%20Movers" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Packers%20%26%20Movers" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 10. CCTV
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="cctv">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/cctv.png" alt="CCTV Installation">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>CCTV Installation</h3>
+
+                            <p class="service-description">
+                                Professional CCTV installation,
+                                setup and maintenance.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.8</span>
+
+                                <span class="review-count">
+                                    (387 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹799
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=CCTV" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=CCTV" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 11. WATER PURIFIER
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="water purifier">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/water-purifier.png" alt="Water Purifier Service">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Water Purifier Service</h3>
+
+                            <p class="service-description">
+                                RO service, filter replacement,
+                                installation and maintenance.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.7</span>
+
+                                <span class="review-count">
+                                    (602 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹249
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Water Purifier" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Water Purifier" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 12. SMART HOME
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="smart home">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/smart-home.png" alt="Smart Home Installation">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Smart Home Installation</h3>
+
+                            <p class="service-description">
+                                Smart lighting, security, automation
+                                and connected home setup.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.8</span>
+
+                                <span class="review-count">
+                                    (291 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹999
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Smart Home" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Smart Home" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 13. SOLAR
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="solar panel">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/solar.png" alt="Solar Panel Service">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Solar Panel Service</h3>
+
+                            <p class="service-description">
+                                Solar panel installation,
+                                inspection and maintenance.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.7</span>
+
+                                <span class="review-count">
+                                    (184 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹1,999
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Solar%20Panel%20Service" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Solar%20Panel%20Service" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 14. GARDENING
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="gardening landscaping">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/gardening.png" alt="Gardening">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Gardening & Landscaping</h3>
+
+                            <p class="service-description">
+                                Garden maintenance, trimming,
+                                planting and landscaping.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.6</span>
+
+                                <span class="review-count">
+                                    (226 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹399
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Gardening%20%26%20Landscaping" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Gardening%20%26%20Landscaping" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 15. WATERPROOFING
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="waterproofing">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/waterproofing.png" alt="Waterproofing">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Waterproofing</h3>
+
+                            <p class="service-description">
+                                Roof, bathroom, wall and leakage
+                                waterproofing solutions.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.7</span>
+
+                                <span class="review-count">
+                                    (314 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹1,499
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Waterproofing" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Waterproofing" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 16. HANDYMAN
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 service-item" data-service="handyman">
+
+                    <div class="service-page-card">
+
+                        <div class="service-page-image">
+
+                            <img src="images/handyman.png" alt="Handyman">
+
+                            <span class="verified-badge">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+                        <div class="service-page-content">
+
+                            <h3>Handyman</h3>
+
+                            <p class="service-description">
+                                General home repairs, installation,
+                                assembly and maintenance.
+                            </p>
+
+                            <div class="service-rating">
+
+                                <span class="stars">★★★★★</span>
+
+                                <span class="rating-number">4.8</span>
+
+                                <span class="review-count">
+                                    (475 reviews)
+                                </span>
+
+                            </div>
+
+                            <div class="service-price">
+
+                                <div>
+                                    <div class="price-label">
+                                        STARTING FROM
+                                    </div>
+
+                                    <div class="price-value">
+                                        ₹299
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="service-buttons">
+
+                                <a href="compare.html?service=Handyman" class="compare-btn">
+                                    Compare
+                                </a>
+
+                                <a href="compare.html?service=Handyman" class="book-btn">
+                                    Book Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- NOTE -->
+
+            <div class="services-note">
+
+                <p>
+                    <i class="bi bi-info-circle me-1"></i>
+                    Prices shown are starting/demo prices for the MANVIK
+                    prototype. Final pricing may vary based on the service
+                    requirement.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     FOOTER
+========================================================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <div class="col-lg-4">
+
+                    <img src="images/manvik-logo.png" alt="MANVIK" class="footer-logo">
+
+                    <p class="footer-description">
+                        MANVIK is an AI-powered home service comparison and
+                        booking platform helping customers find the right
+                        professional at the right price.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-6 col-lg-2">
+
+                    <h6>Company</h6>
+
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About Us</a>
+                    <a href="reviews.html">Reviews</a>
+
+                </div>
+
+
+                <div class="col-6 col-lg-2">
+
+                    <h6>Support</h6>
+
+                    <a href="customer-care.html">
+                        Customer Care
+                    </a>
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <h6>Contact Us</h6>
+
+                    <div class="footer-contact">
+
+                        <p>
+                            <i class="bi bi-envelope"></i>
+                            support@manvik.com
+                        </p>
+
+                        <p>
+                            <i class="bi bi-telephone"></i>
+                            +91 1800 123 4567
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt"></i>
+                            Mumbai, Maharashtra, India
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr class="footer-line">
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 MANVIK. All Rights Reserved.
+                </p>
+
+                <p>
+                    Compare. Choose. Relax.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Search Script -->
+
+    <!-- Search Script -->
+    <script>
+
+        const searchInput = document.getElementById("serviceSearch");
+        const services = document.querySelectorAll(".service-item");
+
+        function filterServices() {
+
+            const searchText = searchInput.value.toLowerCase().trim();
+
+            services.forEach(function (service) {
+
+                const serviceName =
+                    service.getAttribute("data-service").toLowerCase();
+
+                if (serviceName.includes(searchText)) {
+                    service.style.display = "";
+                } else {
+                    service.style.display = "none";
+                }
+
+            });
+
+        }
+
+        // Search instantly while typing
+        searchInput.addEventListener("input", filterServices);
+
+        // Search when Enter is pressed
+        searchInput.addEventListener("keypress", function (event) {
+
+            if (event.key === "Enter") {
+                filterServices();
+            }
+
+        });
+
+        // Read search from homepage URL
+        const urlParams =
+            new URLSearchParams(window.location.search);
+
+        const urlSearch =
+            urlParams.get("search");
+
+        if (urlSearch) {
+
+            searchInput.value = urlSearch;
+
+            filterServices();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
